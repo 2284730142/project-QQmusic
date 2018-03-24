@@ -1,5 +1,7 @@
 import React from "react";
-import './frame.less';
+
+import './frameDrag.less';
+import '../../../global/css/theme.less';
 
 class FrameDrag extends React.Component {
     constructor(props) {
@@ -10,7 +12,9 @@ class FrameDrag extends React.Component {
     render() {
 
         return (
-            <div className={`${'frame-drag'}`} style={{left: this.props.open ? 0 : '-7.5rem'}}>
+            <div className={`${'frame-drag'}`}
+                 style={{left: this.props.open ? 0 : '-7.5rem'}}
+            >
                 <div className={`${'frame-drag-main'}`}>
                     <div className={`${'frame-drag-main-item'}`}>
                     </div>

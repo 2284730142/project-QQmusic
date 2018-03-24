@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './frame.less';
-import '../../global/css/theme.less';
+import './frameMusic.less';
+import '../../../global/css/theme.less';
 
 class FrameMusic extends React.Component {
     constructor(props) {

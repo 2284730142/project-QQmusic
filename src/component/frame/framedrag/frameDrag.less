@@ -1,0 +1,58 @@
+.frame-drag {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 102, 102, 0.4);
+  top: 0;
+  left: -7.5rem;
+  transition: left 0.7s;
+  z-index: 100;
+  .frame-drag-main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6.16rem;
+    height: 100%;
+    background: #FFFFFF;
+    overflow-y: auto;
+    .frame-drag-main-item {
+      width: 100%;
+      height: 0.77rem;
+      font-weight: 500;
+      line-height: 200%;
+      padding-left: 0.5rem;
+      font-size: 0.36rem;
+      span {
+        position: absolute;
+        right: 0.5rem;
+        font-size: 0.25rem;
+        color: #c9c9c9;
+      }
+    }
+    .frame-drag-main-bottom {
+      position: fixed;
+      width: 6.16rem;
+      height: 1.02rem;
+      bottom: 0;
+      border-top: 1px solid #e6e6e6;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      .set {
+        left: 0.5rem;
+        position: absolute;
+      }
+      .out {
+        position: absolute;
+        right: 0.1rem;
+      }
+    }
+  }
+  .frame-drag-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.34rem;
+    height: 100%;
+  }
+}
