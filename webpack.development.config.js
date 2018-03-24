@@ -43,14 +43,14 @@ module.exports = {
     resolve: {
         extensions: [' ', '.js', '.json']
     },
-    plugins: [
-        new webpack.NoEmitOnErrorsPlugin(),
-        new HtmlwebpackPlugin({
-            filename:"index.html",
-            template: path.resolve('./src/index.html'),
-            hash:true
-        })
-    ],
+    // plugins: [
+    //     new webpack.NoEmitOnErrorsPlugin(),
+    //     new HtmlwebpackPlugin({
+    //         filename:"index.html",
+    //         template: path.resolve('./src/index.html'),
+    //         hash:true
+    //     })
+    // ],
     // devServer: {
     //     contentBase: path.resolve('./src'),
     //     historyApiFallback: true,
