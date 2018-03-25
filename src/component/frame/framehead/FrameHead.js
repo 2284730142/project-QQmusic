@@ -2,6 +2,7 @@ import React from 'react';
 
 import './frameHead.less';
 import '../../../global/css/theme.less';
+import '../../../global/css/iconfont.less';
 
 import FrameHeadItem from './FrameHeadItem';
 
@@ -24,10 +25,9 @@ class FrameHead extends React.Component {
         return (
             <div className={`${'frame-head'}`}>
                 <div className={`${'frame-head-top'}`}>
-                    <button onClick={this.props.openDrag}
-                            className={`${'frame-head-top-open'}`}>
-                        ~
-                    </button>
+                    <div onClick={this.props.openDrag}
+                         className={`${'frame-head-top-open'} ${'icon-htmal5icon35'}`}>
+                    </div>
                     <div className={`${'frame-head-top-center'}`}>
                         {
                             // 这个绑定方式为了传入参数
@@ -44,14 +44,17 @@ class FrameHead extends React.Component {
                             })
                         }
                     </div>
-                    <button className={`${'frame-head-top-plus'}`}
-                            onClick={this.props.openPlus}
+                    <div className={`${'frame-head-top-plus'} ${'icon-jia'}`}
+                         onClick={this.props.openPlus}
                     >
-                        +
-                    </button>
+                    </div>
                 </div>
                 <div className={`${'frame-head-bottom'}`}>
-                    <div onClick={this.props.openSearch}>搜索</div>
+                    <div onClick={this.props.openSearch}>
+                        <span className={`${'icon-sousuo'}`}>
+                        </span>
+                        搜索
+                    </div>
                 </div>
             </div>
         )

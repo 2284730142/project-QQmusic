@@ -8,4 +8,42 @@
   opacity: 0;
   transition: opacity 0.5s;
   z-index: -1;
+  .frame-plus-main {
+    position: absolute;
+    width: 3.42rem;
+    height: 1.83rem;
+    right: 0.08rem;
+    top: 1rem;
+    background: #ffffff;
+    border-radius: 0.08rem;
+    z-index: 100;
+    border: 1px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    .frame-plus-main-item {
+      width: 3.42rem;
+      height: 0.915rem;
+      background: #ffffff;
+      font-size: 0.36rem;
+      line-height: 0.915rem;
+      span {
+        color: #2ebe76;
+        font-size: 0.42rem;
+        margin: 0 0.38rem;
+      }
+      &:first-child {
+        border-bottom: 1px solid grey;
+      }
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 0.15rem solid transparent;
+      border-right: 0.15rem solid transparent;
+      border-bottom: 0.15rem solid #ffffff;
+      position: absolute;
+      top: -0.1rem;
+      right: 0.35rem;
+    }
+  }
 }

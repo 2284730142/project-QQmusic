@@ -7,4 +7,137 @@
   left: 0;
   transition: top 0.1s;
   z-index: 10;
+  .frame-search-head {
+    width: 100%;
+    height: 0.84rem;
+    background: #31c27c;
+    display: flex;
+    justify-content: center;
+    .back, .speak {
+      font-size: 0.46rem;
+      height: 0.84rem;
+      line-height: 0.84rem;
+      color: #ffffff;
+    }
+    .input {
+      width: 6.0rem;
+      height: 0.84rem;
+      color: #abe6c8;
+      margin: 0 0.08rem;
+      input {
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0.40rem;
+        background: #31c27c;
+        color: #abe6c8;
+        &::-webkit-input-placeholder {
+          color: #abe6c8;
+        }
+        &:-ms-input-placeholder {
+          color: #abe6c8;
+        }
+        &:-moz-placeholder {
+          color: #abe6c8;
+        }
+        &::-moz-placeholder {
+          color: #abe6c8;
+        }
+      }
+    }
+  }
+  .frame-search-hot {
+    width: 100%;
+    height: 3.52rem;
+    .title {
+      width: 100%;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      margin-top: 0.3rem;
+      padding-left: 0.4rem;
+      color: #818181;
+      font-size: 0.3rem;
+    }
+    .main {
+      width: 100%;
+      height: 2.35rem;
+      .main-container {
+        width: 6.7rem;
+        height: 1.7rem;
+        margin: 0 auto;
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        div {
+          font-size: 0.3rem;
+          color: #000000;
+          border: 0.02rem solid grey;
+          border-radius: 0.6rem;
+          width: auto;
+          height: 0.6rem;
+          text-align: center;
+          line-height: 0.6rem;
+          margin: 0.1rem 0.1rem;
+          padding-left: 0.18rem;
+          padding-right: 0.18rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .frame-search-history {
+    position: absolute;
+    width: 100%;
+    bottom: 1.12rem;
+    top: 4.36rem;
+    .title {
+      width: 100%;
+      height: 0.66rem;
+      font-size: 0.3rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.02rem solid gainsboro;
+      span {
+        &:first-child {
+          color: #818181;
+          margin-left: 0.4rem;
+        }
+        &:last-child {
+          color: #32c27d;
+          margin-right: 0.4rem;
+        }
+      }
+    }
+    .main {
+      position: absolute;
+      width: 100%;
+      top: 0.66rem;
+      bottom: 0;
+      overflow-y: auto;
+      .item {
+        width: 100%;
+        height: 1.03rem;
+        line-height: 1.03rem;
+        background: #ffffff;
+        border-bottom: 0.01rem solid gainsboro;
+        display: flex;
+        justify-content: space-between;
+        span {
+          &:first-child {
+            color: #000000;
+            font-size: 0.36rem;
+            margin-left: 0.4rem;
+            font-weight: 600;
+          }
+          &:last-child {
+            color: #adadad;
+            font-size: 0.18rem;
+            margin-right: 0.44rem;
+          }
+        }
+      }
+    }
+  }
 }

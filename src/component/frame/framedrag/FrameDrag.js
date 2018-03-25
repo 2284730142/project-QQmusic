@@ -2,6 +2,9 @@ import React from "react";
 
 import './frameDrag.less';
 import '../../../global/css/theme.less';
+import '../../../global/css/iconfont.less';
+
+import FrameDragSelect from './FrameDragSelect';
 
 class FrameDrag extends React.Component {
     constructor(props) {
@@ -37,12 +40,27 @@ class FrameDrag extends React.Component {
                     </div>
                     <div className={`${'frame-drag-main-item'}`}>
                         定时关闭
+                        <span>
+                            <FrameDragSelect
+                                name={'TimingClosure'}
+                            />
+                        </span>
                     </div>
                     <div className={`${'frame-drag-main-item'}`}>
                         仅Wi-Fi联网
+                        <span>
+                            <FrameDragSelect
+                                name={'onlyWiFi'}
+                            />
+                        </span>
                     </div>
                     <div className={`${'frame-drag-main-item'}`}>
                         流量提醒
+                        <span>
+                            <FrameDragSelect
+                                name={'TrafficReminding'}
+                            />
+                        </span>
                     </div>
                     <div className={`${'frame-drag-main-item'}`}>
                         听歌偏好
@@ -67,12 +85,16 @@ class FrameDrag extends React.Component {
                     <div className={`${'frame-drag-main-item'}`}>
                     </div>
                     <div className={`${'frame-drag-main-bottom'}`}>
-                        <button className={`${'set'}`}>
+                        <div className={`${'set'}`}>
+                            <span className={`${'icon-shezhi'}`}>
+                            </span>
                             设置
-                        </button>
-                        <button className={`${'out'}`}>
+                        </div>
+                        <div className={`${'out'}`}>
+                            <span className={`${'icon-tuichu'}`}>
+                            </span>
                             退出登录/关闭
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div className={`${'frame-drag-right'}`}

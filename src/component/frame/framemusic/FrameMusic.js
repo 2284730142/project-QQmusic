@@ -2,6 +2,7 @@ import React from 'react';
 
 import './frameMusic.less';
 import '../../../global/css/theme.less';
+import '../../../global/css/iconfont.less';
 
 class FrameMusic extends React.Component {
     constructor(props) {
@@ -22,10 +23,12 @@ class FrameMusic extends React.Component {
                     白色限购
                 </div>
                 <div className={`${'frame-music-op'}`}>
-                    *
+                    <span className={`${'icon-bofang'}`}>
+                    </span>
                 </div>
                 <div className={`${'frame-music-menu'}`}>
-                    ∧
+                    <span className={`${'icon-zhankaicaidan'}`}>
+                    </span>
                 </div>
             </div>
         )

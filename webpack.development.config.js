@@ -9,7 +9,7 @@ const postcssOpts = {
         autoprefixer({
             browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],
         }),
-        pxtorem({ rootValue: 100, propWhiteList: [] })
+        pxtorem({rootValue: 100, propWhiteList: []})
     ],
 };
 
@@ -37,7 +37,25 @@ module.exports = {
                     { loader: 'postcss-loader', options: postcssOpts },
                     'less-loader'
                 ]
-            }
+            },
+            /*{
+                test: /\.less$/,
+                exclude: /node_modules/,
+                loader: 'style!css!postcss!less'
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loader: 'style!css!postcss'
+            },*/
+            {
+                test: /\.(png|gif|jpg|jpeg|bmp)$/i,
+                loader: 'url-loader?limit=50000'
+            },
+            {
+                test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
+                loader: 'url-loader?limit=50000'
+            },
         ]
     },
     resolve: {
