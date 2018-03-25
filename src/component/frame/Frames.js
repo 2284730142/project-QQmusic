@@ -3,6 +3,8 @@ import React from 'react';
 import './frame.less';
 import '../../global/css/theme.less';
 
+import '../../global/js/screenFix';
+
 import FrameHead from './framehead/FrameHead';
 import FrameBody from './framebody/FrameBody';
 import FrameDrag from './framedrag/FrameDrag';

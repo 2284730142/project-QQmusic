@@ -69,9 +69,11 @@ class FrameSearch extends React.Component {
 
 
     componentWillMount() {
-        this.setState({
-            searchHistory: JSON.parse(localStorage.getItem('searchHistory'))
-        });
+        if (localStorage.getItem('searchHistory')) {
+            this.setState({
+                searchHistory: JSON.parse(localStorage.getItem('searchHistory'))
+            });
+        }
     }
 
     render() {
