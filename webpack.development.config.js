@@ -50,11 +50,11 @@ module.exports = {
             },*/
             {
                 test: /\.(png|gif|jpg|jpeg|bmp)$/i,
-                loader: 'url-loader?limit=50000'
+                loader: 'url-loader?limit=2048'
             },
             {
                 test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
-                loader: 'url-loader?limit=50000'
+                loader: 'url-loader?limit=2048'
             },
         ]
     },
