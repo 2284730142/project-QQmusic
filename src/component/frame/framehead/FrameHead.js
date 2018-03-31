@@ -25,7 +25,10 @@ class FrameHead extends React.Component {
         return (
             <div className={`${'frame-head'}`}>
                 <div className={`${'frame-head-top'}`}>
-                    <div onClick={this.props.openDrag}
+                    <div onClick={() => {
+                        this.props.openDrag();
+                        this.props.openBack();
+                    }}
                          className={`${'frame-head-top-open'} ${'icon-htmal5icon35'}`}>
                     </div>
                     <div className={`${'frame-head-top-center'}`}>
@@ -45,12 +48,17 @@ class FrameHead extends React.Component {
                         }
                     </div>
                     <div className={`${'frame-head-top-plus'} ${'icon-jia'}`}
-                         onClick={this.props.openPlus}
+                         onClick={() => {
+                             this.props.openPlus();
+                             this.props.openBack();
+                         }}
                     >
                     </div>
                 </div>
                 <div className={`${'frame-head-bottom'}`}>
-                    <div onClick={this.props.openSearch}>
+                    <div onClick={() => {
+                        this.props.openSearch();
+                    }}>
                         <span className={`${'icon-sousuo'}`}>
                         </span>
                         搜索

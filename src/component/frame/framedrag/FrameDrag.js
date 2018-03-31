@@ -97,9 +97,6 @@ class FrameDrag extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className={`${'frame-drag-right'}`}
-                     onClick={this.props.closeDrag}>
-                </div>
             </div>
         )
     }

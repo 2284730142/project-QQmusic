@@ -11,6 +11,7 @@ import FrameDrag from './framedrag/FrameDrag';
 import FrameMusic from './framemusic/FrameMusic';
 import FrameSearch from './framesearch/FrameSearch';
 import FramePlus from './frameplus/FramePlus';
+import FrameBack from './frameback/FrameBack';
 
 class Frames extends React.Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class Frames extends React.Component {
             dragOpen: false,
             searchOpen: false,
             plusOpen: false,
+            backOpen: false,
             bodyState: 0
         };
         this.openDrag = this.openDrag.bind(this);
@@ -27,6 +29,8 @@ class Frames extends React.Component {
         this.closeSearch = this.closeSearch.bind(this);
         this.openPlus = this.openPlus.bind(this);
         this.closePlus = this.closePlus.bind(this);
+        this.openBack = this.openBack.bind(this);
+        this.closeBack = this.closeBack.bind(this);
         this.bodyChange = this.bodyChange.bind(this);
     }
 
@@ -54,6 +58,14 @@ class Frames extends React.Component {
         this.setState({plusOpen: false});
     }
 
+    openBack() {
+        this.setState({backOpen: true});
+    }
+
+    closeBack() {
+        this.setState({backOpen: false});
+    }
+
     bodyChange(id) {
         this.setState({bodyState: id});
     }
@@ -61,28 +73,21 @@ class Frames extends React.Component {
     render() {
         return (
             <div className={`${'frame'}`}>
-                <FrameHead
-                    openDrag={this.openDrag}
-                    openSearch={this.openSearch}
-                    openPlus={this.openPlus}
-                    bodyChange={this.bodyChange}
-                />
-                <FrameBody
-                    bodyState={this.state.bodyState}
-                />
-                <FrameDrag
-                    open={this.state.dragOpen}
-                    closeDrag={this.closeDrag}
-                />
+                <FrameHead openDrag={this.openDrag}
+                           openSearch={this.openSearch}
+                           openPlus={this.openPlus}
+                           openBack={this.openBack}
+                           bodyChange={this.bodyChange}/>
+                <FrameBody bodyState={this.state.bodyState}/>
+                <FrameDrag open={this.state.dragOpen}/>
                 <FrameMusic/>
-                <FrameSearch
-                    open={this.state.searchOpen}
-                    closeSearch={this.closeSearch}
-                />
-                <FramePlus
-                    open={this.state.plusOpen}
-                    closeSearch={this.closePlus}
-                />
+                <FrameSearch open={this.state.searchOpen}
+                             closeSearch={this.closeSearch}/>
+                <FramePlus open={this.state.plusOpen}/>
+                <FrameBack open={this.state.backOpen}
+                           closeBack={this.closeBack}
+                           closePlus={this.closePlus}
+                           closeDrag={this.closeDrag}/>
             </div>
         )
     }

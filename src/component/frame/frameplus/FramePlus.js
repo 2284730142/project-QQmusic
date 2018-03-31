@@ -24,10 +24,8 @@ class FramePlus extends React.Component {
         return (
             <div className={`${'frame-plus'}`}
                  style={{
-                     zIndex: this.props.open ? '100' : '-1',
-                     opacity: this.props.open ? '0.4' : '0'
-                 }}
-                 onClick={this.props.closeSearch}>
+                     zIndex: this.props.open ? '110' : '-1',
+                 }}>
                 <div className={`${'frame-plus-main'}`}>
                     <div className={`${'frame-plus-main-item'}`}
                          onClick={this.listen}>
